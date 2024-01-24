@@ -1,0 +1,368 @@
+  body {
+    background-image: url('/static/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 1%;
+    background-color: rgb(23, 23, 27);
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 5%;
+  }
+
+  .button {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(23, 23, 27);
+    border: 1.5px solid rgb(73, 73, 80);
+    padding: 1% 1.5%;
+    font-size: 1.2vw;
+    font-family: 'Kodchasan', sans-serif;
+  }
+
+  .button2 {
+    font-weight: 600;
+  }
+
+  .button1 {
+    font-weight: 600;
+  }
+
+  .section {
+    height: 50vh;
+    text-align: center;
+    padding: 3% 2%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+
+  .section_text {
+    margin-bottom: 2%;
+    font-size: 3vw;
+    color: rgba(192, 192, 192, 1);
+    font-family: 'Kodchasan', sans-serif;
+  }
+
+  .registration-button {
+    background-color: rgba(73, 73, 80, 1);
+    font-weight: 600;
+    font-size: 1.5vw;
+    width: 15%;
+    height: 4vh;
+    border: 1.5px solid rgba(73, 73, 80, 1);
+    margin-left: 25%; /* Увеличим отступ слева для выравнивания */
+  }
+
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+
+  .section2 img {
+    width: 20%;
+  }
+
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-left: 1.5%; */
+    margin-top: 20px;
+  }
+
+  .topblock{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 4%;
+  }
+
+  .block1 {
+    border: 1.5px solid rgba(73, 73, 80, 1);
+    border-radius: 30px;
+    width: 30%;
+    height: 13vw;   
+    background-color: rgba(43, 43, 52, 1);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .block2 {
+    border: 1.5px solid rgba(73, 73, 80, 1);
+    border-radius: 30px;
+    width: 30%;
+    height: 13vw;   
+    background-color: rgba(43, 43, 52, 1);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info{
+    width: 90%;
+  }
+
+
+  .info h1{
+    font-weight: 600;
+    font-size: 3vw;
+    color: rgba(192, 192, 192, 1);
+    font-family: 'Kodchasan', sans-serif;
+  }
+
+  .info p{
+    font-size: 1vw;
+    color: rgba(192, 192, 192, 1);
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 500;
+  }
+
+  .bottomblock{
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    gap: 4%;
+    margin-top: 20px;
+  }
+
+  .block3 {
+    width: 25%; /* Пример: 30% от ширины родительского контейнера */
+    height: 13vw; /* Пример: 20% от ширины viewport */
+    background-color: rgba(43, 43, 52, 1);
+    margin-top: 10px;
+    border: 1.5px solid rgba(73, 73, 80, 1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+  }
+
+  .block4 {
+    width: 35%; /* Пример: 50% от ширины родительского контейнера */
+    height: 13vw; /* Пример: 20% от ширины viewport */
+    background-color: rgba(43, 43, 52, 1);
+    margin-top: 10px;
+    border: 1.5px solid rgba(73, 73, 80, 1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  footer img{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ваши существующие стили */
+
+  .popup {
+    display: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 67%;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+  .register{
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+  }
+
+  .login{
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .popup-content {
+    background-color: var(--Main-Main-color, #17171B);
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px solid var(--Main-Additional-color-2, #3A3A43);
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup-content .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--Main-Text-color, #C0C0C0);
+    cursor: pointer;
+  }
+
+  .popup-content .close a {
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: var(--Main-Text-color, #C0C0C0);
+  }
+
+  .popup-content h2 {
+    color: var(--Main-Text-color, #C0C0C0);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: 'Kodchasan', sans-serif;
+  }
+
+  /* Стили для надписей над полями ввода */
+  .popup-content label {
+    color: var(--Main-Text-color, #C0C0C0);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px; /* Добавлен отступ снизу */
+    display: block;
+    font-family: 'Kodchasan', sans-serif;
+    text-align: left;
+  }
+
+
+
+  /* Стили для полей ввода */
+  .popup-content input {
+    border: none;
+    border-radius: 10px;
+    background: var(--Main-Additional-color-2, #3A3A43);
+    width: 100%; /* Занимает 100% доступной ширины контейнера */
+    height: 35px;
+    flex-shrink: 0;
+    margin-bottom: 15px; /* Добавлен отступ снизу */
+  }
+
+  .popup-content input[type='text']{
+    font-size: 16px;
+      font-family: 'Kodchasan', sans-serif;
+      color: rgba(192, 192, 192, 1);
+  }
+
+  .popup-content input[type='password']{
+    font-size: 16px;
+      font-family: 'Kodchasan', sans-serif;
+      color: rgba(192, 192, 192, 1);
+  }
+
+
+  /* Псевдокласс :target для отображения всплывающего окна при наличии #registrationPopup в URL */
+  .popup:target {
+    display: flex;
+  }
+
+  /* Псевдокласс :target для отображения затемнения заднего фона */
+  .popup:target + .popup-overlay {
+    display: block;
+  }
+
+  /* Добавляем черный квадрат с прозрачностью */
+  .popup-overlay::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  .popup-content input[type="submit"] {
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--Main-Additional-color-2, #3A3A43);
+    display: flex;
+    width: 100%;
+    padding: 7px 9.8%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 45px;
+    color: var(--Main-Text-color, #C0C0C0);
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+  }
+
+  .popup-content .or-text {
+    color: var(--Main-Text-color, #C0C0C0);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 20px; /* Добавим отступ сверху */
+    font-family: 'Kodchasan', sans-serif;
+  }
+
+  .popup-content .login-link {
+    color: var(--Main-Text-color, #C0C0C0);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .popup-content select {
+    border: none;
+    border-radius: 10px;
+    background: var(--Main-Additional-color-2, #3A3A43);
+    width: 100%; /* Занимает 100% доступной ширины контейнера */
+    height: 35px;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-family: 'Kodchasan', sans-serif;
+    color: rgba(192, 192, 192, 1);
+}

@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kodchasan', sans-serif;
+    background-image: url('/static/images/Background\ \(2\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    height:70px;
+    background-color: rgba(23, 23, 27, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    /* Стили вашего логотипа, например: */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background: rgb(38, 38, 44);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    border-left:1px solid rgba(192, 192, 192, 1) ;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: var(--Main-Text-color, #C0C0C0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: var(--Main-Text-color, #C0C0C0);
+    color: var(--Main-Additional-color, #2B2B34);;
+}
+
+.subscribe-btn {
+    color: var(--Main-Text-color, #C0C0C0);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px 20px; /* Оставляем паддинг, чтобы сохранить высоту и ширину кнопки */
+    border: none;
+    border-radius: 15px; /* Изменен радиус границы */
+    cursor: pointer;
+    margin-right: 10px; /* Отступ между кнопкой и бургер-меню */
+    transition: background-color 0.3s;
+    background: var(--Main-Additional-color, #2B2B34); /* Добавлен цвет фона */
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+hr{
+    border: 1px solid rgba(192, 192, 192, 1);
+}
+
+.section2 {
+    padding-top: 15%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+  }
+
+  .section2 a {
+    width: 20%;
+  }
+
+
+ .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
